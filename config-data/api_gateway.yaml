@@ -42,15 +42,14 @@ spring:
           predicates:
             - Path=/api/calculation/**
 
+      httpclient:
+        connect-timeout: 5000
+        response-timeout: 10000
 
-#      httpclient:
-#        connect-timeout: 5000
-#        response-timeout: 10000
-
-#      globalcors:
-#        cors-configurations:
-#          '[/]':
-#            allowedOrigins: "http://localhost:5173"
-#            allowedMethods: "*"
-#            allowedHeaders: "*"
-#            allowCredentials: true
+      globalcors:
+        cors-configurations:
+          '[/]':
+            allowedOrigins: "http://localhost:5173"
+            allowedMethods: "*"
+            allowedHeaders: "*"
+            allowCredentials: true
