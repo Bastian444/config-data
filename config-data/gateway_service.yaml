@@ -22,23 +22,23 @@ spring:
           predicates:
             - Path=/api/loan/simulate/**
         - id: ms2_register
-          uri: lb://ms2_register
+          uri: lb://MS2REGISTER
           predicates:
             - Path=/api/user/**
         - id: ms3_request
-          uri: lb://ms3_request
+          uri: lb://MS3REQUEST
           predicates:
             - Path=/api/loan/**
         - id: ms4_evaluation
-          uri: lb://ms4_evaluation
+          uri: lb://MS4EVALUATION
           predicates:
             - Path=/api/evaluation/**
         - id: ms5_follow
-          uri: lb://ms5_follow
+          uri: lb://MS5FOLLOW
           predicates:
             - Path=/api/follow/**
         - id: ms6_calculation
-          uri: lb://ms6_calculation
+          uri: lb://MS6CALCULATION
           predicates:
             - Path=/api/calculation/**
 
