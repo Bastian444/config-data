@@ -3,7 +3,7 @@ server:
 eureka:
   instance:
     preferIpAddress: true    # Prioriza usar la IP del contenedor
-    hostname: ${HOSTNAME}    # Resuelve el nombre del pod automáticamente
+    instance-id: ${spring.application.name}:${server.port}   # Resuelve el nombre del pod automáticamente
   client:
     fetch-registry: true
     register-with-eureka: true
