@@ -47,7 +47,7 @@ spring:
         - id: m5_bookingsandreceipt_router
           uri: lb://MS5BOOKINGSANDRECEIPT
           predicates:
-            - Path=/api/bookingsandreceipt/**
+            - Path=/api/bookings/**, /api/receipts/**
         - id: m6_rack_router
           uri: lb://MS6RACK
           predicates:
