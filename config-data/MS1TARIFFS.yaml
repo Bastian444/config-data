@@ -1,11 +1,10 @@
 server:
-  port: ${SERVER_PORT}  # Usa una variable de entorno cuyo valor es dinamico (aleatorio)
+  port: ${PORT:${SERVER_PORT:0}}
 eureka:
-  instance:
-    preferIpAddress: true    # Prioriza usar la IP del contenedor
-    hostname: ${HOSTNAME}    # Resuelve el nombre del pod automáticamente
   client:
     fetch-registry: true
     register-with-eureka: true
     service-url:
       defaultZone: http://localhost:8761/eureka
+  instance:
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
