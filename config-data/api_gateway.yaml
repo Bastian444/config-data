@@ -43,7 +43,7 @@ spring:
         - id: m4_tariffsspecialday_router
           uri: lb://MS4TARIFFSSPECIALDAY
           predicates:
-            - Path=/api/evaluation/**
+            - Path=/api/specialday/**
         - id: m5_bookingsandreceipt_router
           uri: lb://MS5BOOKINGSANDRECEIPT
           predicates:
