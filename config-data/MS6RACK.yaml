@@ -1,5 +1,5 @@
 server:
-  port: ${SERVER_PORT}  # Usa una variable de entorno cuyo valor es dinamico (aleatorio)
+  port: ${PORT:${SERVER_PORT:0}}  # Usa una variable de entorno cuyo valor es dinamico (aleatorio)
 eureka:
   instance:
     preferIpAddress: true    # Prioriza usar la IP del contenedor
