@@ -2,7 +2,7 @@ server:
   port: ${PORT:${SERVER_PORT:0}}      #usa una variable de entorno cuyo valor es dinamico (aleatorio)
 spring:
   datasource:
-    url: jdbc:mysql://mysql:3306/ms1tariffs   #url de conexion a la base de datos
+    url: jdbc:mysql://mysql:3306/ms6rack   #url de conexion a la base de datos
   jpa:
     hibernate:
       ddl-auto: update
