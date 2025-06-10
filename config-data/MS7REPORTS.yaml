@@ -2,7 +2,7 @@ server:
   port: ${PORT:${SERVER_PORT:0}}      #usa una variable de entorno cuyo valor es dinamico (aleatorio)
 spring:
   datasource:
-    url: jdbc:postgresql://${DB_HOST}:${DB_PORT}/${DB_NAME}   #url de conexion a la base de datos
+    url: jdbc:mysql://${DB_HOST}:${DB_PORT}/${DB_NAME}   #url de conexion a la base de datos
   jpa:
     hibernate:
       ddl-auto: update
